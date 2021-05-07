@@ -2,6 +2,7 @@ import requests
 import json
 from config import keys
 
+
 class ConversionException(Exception):
     pass
 
@@ -19,7 +20,7 @@ class CryptoConverter:
         try:
             base_ticker = keys[base]
         except KeyError:
-            raise ConversionException(f'Не удалось обрпботать валюту {base}')
+            raise ConversionException(f'Не удалось обработать валюту {base}')
 
         try:
             amount = float(amount)
